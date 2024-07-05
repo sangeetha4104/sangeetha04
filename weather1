@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+days=["day1","day2","day3","day4","day5","day6","day7","day8","day9","day10"]
+max_temp=[31,32,33,34,29,36,22,25,26,25]
+min_temp=[30,33,35,38,23,35,24,25,29,28]
+avg_temp=[33,30,32,35,23,32,22,28,29,29]
+ypos=np.arange(len(days))
+plt.plot(days,max_temp,color="pink",linewidth=4,linestyle="-.",marker="*",markersize=10,label="max")
+plt.plot(days,min_temp,color="blue",linewidth=4,linestyle="-.",marker="*",markersize=10,label="min")
+plt.plot(days,avg_temp,color="green",linewidth=4,linestyle="-.",marker="*",markersize=10,label="avg")
+plt.xticks(ypos,days)
+plt.xlabel("Days")
+plt.ylabel("Temperture")
+plt.title("Days and Temperature")
+plt.legend(loc="upper left")
